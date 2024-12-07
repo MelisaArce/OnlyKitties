@@ -12,7 +12,7 @@ const Footer = ()=> {
                     </div>
                     <div class="footer-section useful-info">
                         <h4>Información Útil</h4>
-                        <p>Puedes acercarte a nustro refugio en los siguientes Horarios:</p>
+                        <p>Puedes acercarte a nuestro refugio en los siguientes Horarios:</p>
                         <p>Sábados de 9:00 AM a 3:00 PM</p>
                         <p>Donaciones</p>
                     </div>
