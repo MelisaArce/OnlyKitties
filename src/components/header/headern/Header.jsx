@@ -1,7 +1,16 @@
 import React from 'react';
 import './estilo.css';
+import { useState } from 'react';
+import { useContext } from 'react';
+
+import {Authcontext} from  ../context/Authcontext 
+import { useOutletContext } from 'react-router-dom';
+
+
+
 
 const Header = () => { 
+    const { Islogin, setIsLogin } = useContext(Authcontext);
     return (
         <header>
             <div>
