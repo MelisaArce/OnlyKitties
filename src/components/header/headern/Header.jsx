@@ -1,34 +1,44 @@
-import React from 'react';
 import './estilo.css';
-import { useState } from 'react';
 import { useContext } from 'react';
-
-import {Authcontext} from  ../context/Authcontext 
-import { useOutletContext } from 'react-router-dom';
-
-
-
+import { AuthContext } from '../../context/authcontext';
+import { Link } from 'react-router-dom';
 
 const Header = () => { 
-    const { Islogin, setIsLogin } = useContext(Authcontext);
+    const { isLogin, setIsLogin } = useContext(AuthContext);
+
     return (
         <header>
-            <div>
-                <img 
-                    src="https://scontent.fepa1-1.fna.fbcdn.net/v/t39.30808-6/469170851_8835878499862631_4336393283978189877_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GqD8NjGhJ1UQ7kNvgG49VL6&_nc_zt=23&_nc_ht=scontent.fepa1-1.fna&_nc_gid=AuzUHZhMXrCSzwjnyR4daOx&oh=00_AYBAnPt0yumAVB7cLFRDJHoFeriqt_jJ7Ws1LgIbSrPm8w&oe=675AA15A" 
-                    alt="Only Kitties" 
-                    style={{ width: '150px', height: 'auto' }} 
-                />
+            <div className="header-logo">
+                <iframe 
+                    src="https://assets.pinterest.com/ext/embed.html?id=528961918750929262" 
+                    height="336" 
+                    width="236" 
+                    frameBorder="0" 
+                    scrolling="no"
+                    title="Only Kitties Logo"
+                    style={{ border: 'none' }}
+                ></iframe>
                 <h1>OnlyKitties</h1>
             </div>
             <nav>
-                <a href="#" className="nav-link">Registrar</a>
-                <a href="#" className="nav-link">Iniciar sesión</a>
+                {!isLogin ? (
+                    <>
+                        <Link to="/register" className="nav-link">Registrar</Link>
+                        <Link to="/login" className="nav-link">Iniciar sesión</Link>
+                    </>
+                ) : (
+                    <button onClick={() => setIsLogin(false)} className="nav-link">
+                        Cerrar sesión
+                    </button>
+                )}
             </nav>
         </header>
     );
 }
 
 export default Header;
+
+
+
 
  
