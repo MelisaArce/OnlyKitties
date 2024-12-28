@@ -4,6 +4,51 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
- }    
+    box-sizing: border-box;
+}
+.formRegister {
+    background-color: rgb(218, 153, 212); 
+    margin: auto; 
+    padding: 30px; 
+    border: 3px solid #007f7f; 
+    border-radius: 10px; 
+    width: 300px; 
+    min-height: 150px; 
+    box-shadow: 0 4px 6px rgba(204, 201, 12, 0.1); 
+}
+
+h1 {
+    text-align: center;
+    color: #072e44; 
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #000000; 
+}
 
 
+input {
+    width: 100%; 
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: blueviolet;
+    color: rgb(252, 167, 252); 
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007f7f;
+}

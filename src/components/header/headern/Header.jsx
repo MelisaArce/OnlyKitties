@@ -3,21 +3,23 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context/authcontext';
 import { Link } from 'react-router-dom';
 
-const Header = () => { 
+const Header = () => {
     const { isLogin, setIsLogin } = useContext(AuthContext);
 
     return (
         <header>
             <div className="header-logo">
-                <iframe 
-                    src="https://assets.pinterest.com/ext/embed.html?id=528961918750929262" 
-                    height="336" 
-                    width="236" 
-                    frameBorder="0" 
-                    scrolling="no"
-                    title="Only Kitties Logo"
-                    style={{ border: 'none' }}
-                ></iframe>
+                <a href="/">
+                    <img
+                        src="https://i.imgur.com/AQd8S1w.jpeg"
+                        alt="Logo de Only Kitties"
+                        style={{ 
+                            height: '50px',  
+                            width: 'auto', 
+                            border: 'none' 
+                        }}
+                    />
+                </a>
                 <h1>OnlyKitties</h1>
             </div>
             <nav>
@@ -34,11 +36,6 @@ const Header = () => {
             </nav>
         </header>
     );
-}
+};
 
 export default Header;
-
-
-
-
- 
