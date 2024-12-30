@@ -1,6 +1,18 @@
-import './login.css'
-const Login = () =>{
-    return(
+import React, { useState, useContext } from 'react';
+//import { AuthContext } from '../../AUTHcontext';
+import './login.css';
+
+const Login = () => {
+    const { login } = useContext(AuthContext); 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        login(email, password); 
+    };
+
+    return (
         <div className="login-container">
             <h2>Iniciar Sesión</h2>
             <form onSubmit={handleSubmit} className="login-form">
@@ -32,7 +44,7 @@ const Login = () =>{
                 </p>
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;
