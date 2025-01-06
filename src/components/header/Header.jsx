@@ -8,31 +8,24 @@ const Header = () => {
 
     return (
         <header>
-            <div className="header-logo">
-                <a href="/">
-                    <img
-                        src="https://i.imgur.com/AQd8S1w.jpeg"
-                        alt="Logo de Only Kitties"
-                        style={{ 
-                            height: '50px',  
-                            width: 'auto', 
-                            border: 'none' 
-                        }}
-                    />
-                </a>
-                <h1>OnlyKitties</h1>
-            </div>
             <nav>
-                {!isLogin ? (
-                    <>
-                        <Link to="/register" className="nav-link">Registrar</Link>
-                        <Link to="/login" className="nav-link">Iniciar sesión</Link>
-                    </>
-                ) : (
-                    <button onClick={() => setIsLogin(false)} className="nav-link">
-                        Cerrar sesión
-                    </button>
-                )}
+                <div className="header-logo">
+                    <a href="/">
+                        <img src="https://i.imgur.com/AQd8S1w.jpeg" alt="Logo de Only Kitties" />
+                    </a>
+                </div>
+                <div className="nav-links">
+                    {!isLogin ? (
+                        <>
+                            <Link to="/register" className="nav-link">Registrar</Link>
+                            <Link to="/login" className="nav-link">Iniciar sesión</Link>
+                        </>
+                    ) : (
+                        <button onClick={() => setIsLogin(false)} className="nav-link">
+                            Cerrar sesión
+                        </button>
+                    )}
+                </div>
             </nav>
         </header>
     );
