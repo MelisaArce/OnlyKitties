@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./estiloRegister.css";
+import "./register.css";
 
 export default function Registro() {
   const [nombredeUsuario, setNombredeUsuario] = useState("");

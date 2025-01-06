@@ -1,6 +1,6 @@
-import './estilo.css';
+import './header.css';
 import { useContext } from 'react';
-import { AuthContext } from '../../context/authcontext';
+import { AuthContext } from "../../components/context/AuthContext";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
