@@ -24,4 +24,5 @@ const GatitoCard = () => {
   );
 };
 
+
 export default GatitoCard;

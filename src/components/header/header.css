@@ -7,13 +7,11 @@ header {
     padding: 10px 20px;
     height: 80px; 
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .header-logo {
     display: flex;
     align-items: center;
@@ -24,7 +22,6 @@ nav {
     width: auto; 
     margin-right: 20px; 
 }
-
 .nav-links {
     display: flex;
     align-items: center;

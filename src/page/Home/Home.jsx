@@ -11,9 +11,14 @@ const Home = () => {
         {gatitosMock.map((gatito) => (
           <GatitoCard key={gatito.id} gatito={gatito} />
         ))}
+      <h4>Quieres adoptar un gatito?, haz click en el botón de abajo</h4>
+      <Link to="/adoptar-gatito">
+        <button>Adoptar un gatito</button>
+      </Link>
       </div>
     </div>
   );
 };
 
 export default Home;
+
