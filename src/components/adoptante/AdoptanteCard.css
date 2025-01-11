@@ -1,0 +1,12 @@
+.adoptante-card p {
+    margin: 5;
+    padding: 5px 0;
+    background-color: aquamarine;
+    color: black;
+  }
+  
+  .adoptante-card p::before {
+    font-weight: bold;
+    content: attr(data-label);
+  }
+  
