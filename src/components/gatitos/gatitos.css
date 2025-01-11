@@ -1,22 +1,33 @@
-.gatitos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .gatito-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    background-color: #090606;
 
-  }
-  
-  .gatito-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+.gatitos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gatito-card {
+  border: 1px solid #080808;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gatito-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.gatito-card h2 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.gatito-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
   

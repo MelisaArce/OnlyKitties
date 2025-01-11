@@ -1,7 +1,6 @@
 import React from "react";
-import mockGatitos from "../../util/mockData";
+import gatitosMock from "../../util/mockData";
 import GatitoCard from "../../components/gatitos/GatitoCard";
-
 
 const Home = () => {
   return (
@@ -9,7 +8,7 @@ const Home = () => {
       <h1>Only Kitties</h1>
       <h2>Gatitos en Adopción</h2>
       <div className="gatitos-grid">
-        {mockGatitos.map((gatito) => (
+        {gatitosMock.map((gatito) => (
           <GatitoCard key={gatito.id} gatito={gatito} />
         ))}
       </div>
