@@ -3,14 +3,15 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: aquamarine;
+    background-color: #ffffff;
     padding: 10px 20px;
     height: 80px; 
 }
-
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .header-logo {
     display: flex;
     align-items: center;
@@ -21,44 +22,14 @@ header {
     width: auto; 
     margin-right: 20px; 
 }
-
-.header-logo h1 {
-    font: size 50px;
-    align-items: center;
-    justify-content: center;
-    margin: 0; 
-    color: antiquewhite;
-}
-
-a { 
-    text-decoration: none; 
-    color: black; 
-    font-weight: 600; 
-    margin-left: 10px; 
-}
-    padding: 10px;
-    height: 70px; 
-}
-
-a { 
+.nav-links {
     display: flex;
-    flex-direction: column; 
-    gap: 10px;
+    align-items: center;
+}
+
+.nav-link {
+    margin-left: 10px;
     text-decoration: none;
     color: black;
     font-weight: 600;
-    padding-right: 10px;
 }
-
-header img {
-    position: absolute;
-    top: 10px; 
-    left: 10px; 
-    margin-left: 10px;
-}
-
-
-
-}
- 
- 
