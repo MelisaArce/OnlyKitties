@@ -10,13 +10,14 @@ form {
 
     border-radius: 5px; 
 
-    background-color: #6fd2da
+    background-color: #6fd2da;
 
-    color: #000000; /
+    color: #000000; 
 
-    font-size: 16px; /
+    font-size: 16px; 
 
     box-shadow: 0 0 10px rgba(7, 134, 124, 0.2); 
+}
 
 
 label {
@@ -64,4 +65,5 @@ button {
 
 button:hover {
 
-    background-color: #d11a9a; 
+    background-color: #d11a9a;
+}

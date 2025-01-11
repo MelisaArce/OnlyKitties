@@ -1,5 +1,5 @@
 import React from 'react';
-import './AdoptanteCard.css';
+import './Adoptantecard.css';
 
 const AdoptanteCard = ({ nombre, email, direccion, fechaAdopcion }) => {
   return (

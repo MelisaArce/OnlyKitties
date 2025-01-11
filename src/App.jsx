@@ -22,7 +22,6 @@ function App() {
           <Route path="/gatitos" element={<GatitosPage />} />
           <Route path="/register" element={<Registro />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/adoptar-gatito" element={<AdoptanteForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>
