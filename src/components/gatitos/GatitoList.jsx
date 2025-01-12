@@ -1,30 +1,43 @@
-import React, { useState } from 'react';
-import GatitoCard from './GatitoCard';
-//import Paginado from './Paginado';
+import React, { useState } from "react";
+import mockGatitos from "../../util/mockData";
+import GatitoCard from "./GatitoCard";
 
-const GatitoList = ({ gatitos, onDelete, onEdit }) => {
+const GatitoList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const paginatedGatitos = gatitos.slice(startIndex, startIndex + itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentGatitos = mockGatitos.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(mockGatitos.length / itemsPerPage);
 
   return (
     <div>
-      {paginatedGatitos.map((gatito) => (
-        <GatitoCard
-          key={gatito.id}
-          gatito={gatito}
-          onDelete={onDelete}
-          onEdit={onEdit}
-        />
-      ))}
-      <Paginado
-        totalItems={gatitos.length}
-        itemsPerPage={itemsPerPage}
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-      />
+      <div className="gatitos-grid">
+        {currentGatitos.map((gatito) => (
+          <GatitoCard key={gatito.id} gatito={gatito} />
+        ))}
+      </div>
+      <div className="pagination">
+        <button
+          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          Anterior
+        </button>
+        <span>
+          Página {currentPage} de {totalPages}
+        </span>
+        <button
+          onClick={() =>
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+          }
+          disabled={currentPage === totalPages}
+        >
+          Siguiente
+        </button>
+      </div>
     </div>
   );
 };
