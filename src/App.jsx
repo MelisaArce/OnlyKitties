@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import Registro from './page/register/Register';
 import GatitosPage from './page/gatitos/GatitosPage';
 import "./App.css";
+import AdoptanteForm from './components/adoptante/adoptanteform';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/gatitos" element={<GatitosPage />} />
           <Route path="/register" element={<Registro />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/adoptar-gatito" element={<AdoptanteForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>
