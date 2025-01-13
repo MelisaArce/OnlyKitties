@@ -1,10 +1,11 @@
 import React from "react";
 import "./gatitos.css"; 
 import gatitosMock from "../../util/mockData";
+import { Link } from "react-router-dom";
 
 const GatitoCard = () => {
   return (
-    <div className="gatito-card">
+    <div className="gatito-grid">
       {gatitosMock
           .filter((gato) => gato.estadoAdopcion === "Disponible")
           .map((gato) => (
@@ -18,6 +19,11 @@ const GatitoCard = () => {
               <p>Vacunas al día: {gato.vacunas ? "Sí" : "No"}</p>
               <p>Castrado: {gato.castracion ? "Sí" : "No"}</p>
               <p>Amigable: {gato.amigable ? "Sí" : "No"}</p>
+              <div className="boton-adoptar">
+                <Link to="/adoptar-gatito"> 
+                  <button>Adoptar</button>
+                </Link>
+               </div>
             </div>
           ))}
     </div>

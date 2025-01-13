@@ -1,10 +1,16 @@
-.home-container {
+.home {
     padding: 20px;
     text-align: center;
   }
   
-  .gatitos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
+.home button{
+  padding: 10px;
+  background-color: #4a90e2; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
