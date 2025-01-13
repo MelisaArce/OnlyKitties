@@ -1,7 +1,7 @@
 import "./footer.css";
 const Footer = ()=> {
     return (
-            <footer class= "nada">
+            <footer class= "pie">
                 <div class="footer-container">
                     <div class="footer-section contact-details">
                         <h4>Detalles de Contacto</h4>

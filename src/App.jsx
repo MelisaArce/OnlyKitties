@@ -8,7 +8,7 @@ import Footer from './components/footer/Footer';
 import Registro from './page/register/Register';
 import GatitosPage from './page/gatitos/GatitosPage';
 import "./App.css";
-import AdoptanteForm from './components/adoptante/adoptanteform';
+import AdoptanteForm from './components/adoptante/AdoptanteForm';
 
 
 function App() {
