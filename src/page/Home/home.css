@@ -4,6 +4,7 @@
   }
   
 .home button{
+  width: auto;
   padding: 10px;
   background-color: #4a90e2; 
   color: white;
