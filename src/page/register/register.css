@@ -1,60 +1,88 @@
-.Registro { 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    box-sizing: border-box;
-}
 .formRegister {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    background-color: rgb(218, 153, 212); 
-    margin: auto; 
-    padding: 30px; 
-    border: 3px solid #007f7f; 
-    border-radius: 10px; 
-    width: 300px; 
-    min-height: 300px; 
-    box-shadow: 0 4px 6px rgba(204, 201, 12, 0.1); 
-    text-align: center; 
+    justify-content: center;
+    min-height: 100vh; 
+    background-color: #000000;
+    font-family: Arial, sans-serif; 
+    padding: 20px;
 }
 
-h1 {
-    text-align: center;
-    color: #072e44; 
+.formRegister h1 {
+    color: #4a90e2; 
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
-h2 {
-    margin-bottom: 0.5rem;
-    color: #000000; 
+.formRegister label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333; 
 }
 
+.Registro {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del formulario */
+}
+
+.Registro div {
+    margin-bottom: 15px; /* Espacio entre campos */
+}
 
 input {
-    width: 100%; 
-    padding: 0.8rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Ajusta al ancho del contenedor */
+    padding: 10px;
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 5px; /* Bordes redondeados */
     font-size: 1rem;
+    outline: none; /* Sin borde al hacer clic */
+    transition: border-color 0.3s ease;
 }
 
+input:focus {
+    border-color: #4a90e2; /* Borde azul al enfocarse */
+}
 
-button {
-    padding: 0.8rem 1.5rem;
+.formRegister button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2; /* Azul principal */
+    color: white;
     border: none;
-    background-color: blueviolet;
-    color: rgb(252, 167, 252); 
-    font-size: 1rem;
     border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #007f7f;
+.button:hover {
+    background-color: #357abd; /* Azul más oscuro al pasar el mouse */
+}
+
+p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none; 
+}
+
+a button {
+    margin-top: 10px;
+    background-color: #f0f0f0; 
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+a button:hover {
+    background-color: #ddd; 
 }

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../components/context/AuthContext";
 import "./login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState(""); 
@@ -27,6 +28,7 @@ const Login = () => {
             <input
               type="email"
               id="email"
+              placeholder="Ingrese su Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)} 
               required
@@ -37,12 +39,17 @@ const Login = () => {
             <input
               type="password"
               id="password"
+              placeholder="Ingrese su Contraseña"
               value={password}
               onChange={(e) => setPassword(e.target.value)} 
             />
           </div>
           <button type="submit">Login</button>
         </form>
+        <p>Si no tenes una cuenta:</p>
+         <Link to="/register"> 
+                  <button>¡Registrate!</button>
+          </Link>
       </div>
     );
   };

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./register.css";
+import { Link } from "react-router-dom";
 
 export default function Registro() {
   const [nombredeUsuario, setNombredeUsuario] = useState("");
@@ -29,7 +30,7 @@ export default function Registro() {
       <h1>Registro</h1>
       <form className="Registro" onSubmit={handleSubmit}>
         <div>
-          <h2>Nombre de usuario:</h2>
+          <label>Nombre de usuario:</label>
           <input
             type="text"
             name="nombredeUsuario"
@@ -40,7 +41,7 @@ export default function Registro() {
         </div>
 
         <div>
-          <h2>Email:</h2>
+          <label>Email:</label>
           <input
             type="email"
             name="email"
@@ -51,7 +52,7 @@ export default function Registro() {
         </div>
 
         <div>
-          <h2>Contraseña:</h2>
+          <label>Contraseña:</label>
           <input
             type="password"
             name="contraseña"
@@ -62,7 +63,7 @@ export default function Registro() {
         </div>
 
         <div>
-          <h2>Confirmar Contraseña:</h2>
+          <label>Confirmar Contraseña:</label>
           <input
             type="password"
             name="confirmarContraseña"
@@ -71,9 +72,14 @@ export default function Registro() {
             onChange={(e) => setConfirmarContraseña(e.target.value)}
           />
         </div>
-
-        <button type="submit">Registrar</button>
+        <div className="boton-registrar">
+         <button type="submit">Registrar</button>
+         </div>
       </form>
+         <p>Si ya tenes una cuenta:</p>
+         <Link to="/login"> 
+                  <button>Inicia Sesión</button>
+          </Link>
     </div>
   );
 }
