@@ -1,4 +1,5 @@
-<p align=center><img src="https://i.imgur.com/AQd8S1w.jpeg" ><p>
+
+<img src="public/logo.jpeg" alt="Logo de Only Kitties">
 
 -------------
 
